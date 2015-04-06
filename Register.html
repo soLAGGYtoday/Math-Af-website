@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+	var fullName = document.forms["myForm"]["fullname"].value;
+    var user = document.forms["myForm"]["fname"].value;
+	var pass = document.forms["myForm"]["fpass"].value;
+	var email = document.forms["myForm"]["email"].value;
+	var type = document.forms["myForm"]["type"].value;
+	var classCode = document.forms["myForm"]["classcode"].value;
+    if (user == null || user == "") {
+        alert("Values must be filled out");
+        return false;
+    }else{
+		alert(fullName+" "+user+" "+pass+" "+email+" "+type+" "+classCode);
+	return false;
+	}	
+}
+</script>
+</head>
+<body>
+
+<p>Create an account</p>
+
+<form name="myForm" action="demo_form.jsp"
+onsubmit="return validateForm()" method="post">
+Full name: <input type="text" name="fullname">
+<br>
+Create Username: <input type="text" name="fname">
+<br>
+Create Password: <input type="password" name="fpass">
+<br>
+Email: <input type="text" name="email">
+<br>
+<input type="radio" name="type" value="student"> I am a student
+<input type="radio" name="type" value="teacher"> I am a teacher
+<br>
+Add class code: <input type="text" value="" name="classcode">
+
+
+<input type="submit" value="Submit">
+</form>
+
+<p>Already have an account? <a href="file:///C:/Users/Public/Documents/Database/Login.html">Go back</a></p>
+
+</body>
+</html>

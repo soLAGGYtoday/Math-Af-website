@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var user = document.forms["myForm"]["fname"].value;
+	var pass = document.forms["myForm"]["fpass"].value;
+    if (user == null || user == "") {
+        alert("Name must be filled out");
+        return false;
+    }else{
+	
+		alert(user+" is your username and "+pass+" is your password");
+		return false;
+	}
+	
+	
+}
+</script>
+</head>
+<body>
+<p>Login</p>
+<form name="myForm" action="demo_form.jsp"
+onsubmit="return validateForm()" method="post">
+Username: <input type="text" name="fname">
+Password: <input type="password" name="fpass">
+<input type="submit" value="Submit">
+</form>
+
+<p>Don't have an account? <a href="file:///C:/Users/Public/Documents/Database/Register.html">Register Here</a></p>
+
+</body>
+</html>
